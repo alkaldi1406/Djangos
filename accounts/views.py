@@ -16,7 +16,7 @@ class RegisterView(CreateView):
         login(self.request, self.object)
         return reverse_lazy('Project_list')
 
-@login_required 
+@login_required
 def edit_profile(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance=request.user)
